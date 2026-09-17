@@ -1,0 +1,17 @@
+{
+  "name": "migration-studio",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "视觉候鸟：适配手机与桌面的照片纹理和 Emoji 迁徙编辑器",
+  "scripts": {
+    "start": "node serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/repository.test.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node serve.mjs --root dist"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
