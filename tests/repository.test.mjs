@@ -15,15 +15,15 @@ await test('public build contains only the release allowlist',async()=>{
   for(const file of siteFiles)assert.deepEqual(await readFile(path.join(root,file)),await readFile(path.join(root,'dist',file)),file);
 });
 await test('GitHub project path serves every relative runtime asset',async()=>{
-  await withServer({root:path.join(root,'dist'),base:'/migration-studio/'},async origin=>{
-    for(const file of ['index.html','preview.html',...siteFiles.filter(f=>f.startsWith('assets/'))]){const response=await fetch(origin+'/migration-studio/'+file);assert.equal(response.status,200,file);assert((await response.arrayBuffer()).byteLength>0,file)}
-    const index=await fetch(origin+'/migration-studio/');assert.match(await index.text(),/视觉候鸟/);
-    assert.equal((await fetch(origin+'/migration-studio/assets/app.js',{method:'HEAD'})).status,200);
+  await withServer({root:path.join(root,'dist'),base:'/gc-migration-studio/'},async origin=>{
+    for(const file of ['index.html','preview.html',...siteFiles.filter(f=>f.startsWith('assets/'))]){const response=await fetch(origin+'/gc-migration-studio/'+file);assert.equal(response.status,200,file);assert((await response.arrayBuffer()).byteLength>0,file)}
+    const index=await fetch(origin+'/gc-migration-studio/');assert.match(await index.text(),/视觉候鸟/);
+    assert.equal((await fetch(origin+'/gc-migration-studio/assets/app.js',{method:'HEAD'})).status,200);
   });
 });
 await test('development server never serves repository metadata or user exports',async()=>{
   await withServer({root},async origin=>{
-    for(const file of ['.git/config','.env','package.json','docs/PUBLISH.md','uploads/photo.jpg','migration-studio-project.json','%2e%2e%2fREADME.md'])assert.equal((await fetch(origin+'/'+file)).status,404,file);
+    for(const file of ['.git/config','.env','package.json','docs/PUBLISH.md','uploads/photo.jpg','gc-migration-studio-project.json','%2e%2e%2fREADME.md'])assert.equal((await fetch(origin+'/'+file)).status,404,file);
     assert.equal((await fetch(origin+'/index.html',{method:'POST'})).status,405);
     assert.equal((await fetch(origin+'/tests/smoke.html')).status,200);
   });

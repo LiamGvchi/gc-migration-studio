@@ -27,4 +27,4 @@
 - 老款手机的内存、帧率、大图导出与录制格式支持。
 - 不同设备 Emoji 字体的外观和新字符覆盖。
 
-本记录来自本地独立版验收。线上发布状态见仓库 Actions；公开入口为 `https://liamgvchi.github.io/migration-studio/`。本机 127.0.0.1 链接不能直接在另一台手机打开，同 Wi-Fi 启动方式见 README。
+本记录来自本地独立版验收。线上发布状态见仓库 Actions；公开入口为 `https://liamgvchi.github.io/gc-migration-studio/`。本机 127.0.0.1 链接不能直接在另一台手机打开，同 Wi-Fi 启动方式见 README。

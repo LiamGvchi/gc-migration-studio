@@ -1,10 +1,10 @@
 # 上传 GitHub 与启用在线体验
 
-本包是完整的「视觉候鸟」独立项目，包含手机与桌面界面。建议仓库名：`migration-studio`。没有账号、密钥或付费服务依赖。
+本包是完整的「视觉候鸟」独立项目，包含手机与桌面界面。建议仓库名：`gc-migration-studio`。没有账号、密钥或付费服务依赖。
 
 ## 1. 解压并找到仓库根目录
 
-解压 `migration-studio-github-v1.0.zip`，进入里面的 `migration-studio/`。这一层应直接看到 `index.html`、`package.json`、`assets/`、`.github/`。
+解压 `gc-migration-studio-github-v1.0.zip`，进入里面的 `gc-migration-studio/`。这一层应直接看到 `index.html`、`package.json`、`assets/`、`.github/`。
 
 上传的是这一层的内容，不是 ZIP 文件本身，也不要再嵌套一层目录。macOS Finder 可按 Command + Shift + . 显示隐藏文件；`.github/` 必须一起提交。
 
@@ -23,7 +23,7 @@ npm start
 
 ## 3. 上传代码
 
-在 GitHub 新建空仓库，例如 `migration-studio`。可用 GitHub Desktop 把解压目录添加为本地仓库，再发布到刚创建的远程仓库。
+在 GitHub 新建空仓库，例如 `gc-migration-studio`。可用 GitHub Desktop 把解压目录添加为本地仓库，再发布到刚创建的远程仓库。
 
 也可以在解压目录使用 Git；先把下面的 `YOUR-USERNAME` 和仓库名替换成实际值：
 
@@ -31,13 +31,13 @@ npm start
 git init -b main
 git add .
 git commit -m "Initial release: Migration Studio"
-git remote add origin https://github.com/YOUR-USERNAME/migration-studio.git
+git remote add origin https://github.com/YOUR-USERNAME/gc-migration-studio.git
 git push -u origin main
 ```
 
 如果使用网页上传，也要包含隐藏的 `.github/workflows/`。根目录必须直接是本项目文件。建议首次创建空仓库，不要另外生成 README，以免产生两个不同的初始提交。
 
-本项目仓库：`https://github.com/LiamGvchi/migration-studio`。上述步骤适用于复制部署到自己的仓库。
+本项目仓库：`https://github.com/LiamGvchi/gc-migration-studio`。上述步骤适用于复制部署到自己的仓库。
 
 ## 4. 启用 GitHub Pages
 
@@ -46,7 +46,7 @@ git push -u origin main
 3. 到 **Actions → Deploy GitHub Pages → Run workflow**，选择 `main` 运行。
 4. 等待 `build` 和 `deploy` 成功，打开该运行中 `github-pages` 环境的实际地址。
 
-之后推送 `main` 会自动部署。标准 GitHub.com 项目站点地址形式为 `https://YOUR-USERNAME.github.io/migration-studio/`，最终地址以 Pages 设置和工作流结果为准。这一配置方式来自 [GitHub 官方部署说明](https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically)。
+之后推送 `main` 会自动部署。标准 GitHub.com 项目站点地址形式为 `https://YOUR-USERNAME.github.io/gc-migration-studio/`，最终地址以 Pages 设置和工作流结果为准。这一配置方式来自 [GitHub 官方部署说明](https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically)。
 
 `Check project` 是检查工作流，`Deploy GitHub Pages` 才负责网站上线。若第一次推送时尚未启用 Pages，部署可能失败；完成 Pages 设置后重新运行部署即可。
 

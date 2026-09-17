@@ -1,10 +1,10 @@
-# 视觉候鸟 · Migration Studio
+# gc-migration-studio · 视觉候鸟
 
 **让照片的一部分，带着原来的纹理变成 Emoji 飞走。**
 
-[![点击在线运行视觉候鸟](assets/launch.svg)](https://liamgvchi.github.io/migration-studio/)
+[![点击在线运行视觉候鸟](assets/launch.svg)](https://liamgvchi.github.io/gc-migration-studio/)
 
-**[在线编辑器](https://liamgvchi.github.io/migration-studio/) · [手机尺寸预览](https://liamgvchi.github.io/migration-studio/preview.html)**
+**[在线编辑器](https://liamgvchi.github.io/gc-migration-studio/) · [手机尺寸预览](https://liamgvchi.github.io/gc-migration-studio/preview.html)**
 
 浏览器点开即用，无须安装；手机也可直接访问。
 
@@ -36,7 +36,7 @@ npm start
 
 完整步骤见 **[上传与上线说明](docs/PUBLISH.md)**。
 
-1. 新建仓库，例如 `migration-studio`。
+1. 新建仓库，例如 `gc-migration-studio`。
 2. 将本目录里的文件放到仓库根目录，保留 `.github/` 等隐藏文件。
 3. 如需在线体验，在仓库的 **Settings → Pages → Source** 选择 **GitHub Actions**，再运行 `Deploy GitHub Pages`。
 
